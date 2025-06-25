@@ -27,8 +27,8 @@ app.get('/users', async(req, res)=>{
         res.status(500).json({
             error: "Failed to get users"
         })
-    }
-})
+    } 
+}) 
 
 app.get('/users/:id', async(req, res)=>{
     try {
