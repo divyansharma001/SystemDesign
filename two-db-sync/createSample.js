@@ -29,16 +29,16 @@ async function main(){
             CREATE TABLE IF NOT EXISTS posts(
             id SERIAL PRIMARY KEY,
             user_id INTEGER REFERENCES users(id) on DELETE CASCADE,
-            text TEXT NOT NULL,
+            title VARCHAR(255) NOT NULL,
             body TEXT,
-            created_at TIMESTAMP DEFAULT NOW() 
-            `)
+            created_at TIMESTAMP DEFAULT NOW()
+            );`)
 
         await client.query(`
             INSERT INTO users (name, email)
             VALUES
             ('Divyansh', 'connectwithdivyansharma@gmail.com'),
-            ('User', 'user@example.com')
+            ('User', 'user@gmail.com')
             ON CONFLICT DO NOTHING;
             `);
 
@@ -58,3 +58,5 @@ async function main(){
     }
 
 }
+
+main();
