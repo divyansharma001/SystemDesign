@@ -1,0 +1,10 @@
+{
+  "name": "bloom-filter",
+  "version": "1.0.0",
+  "description": "A Bloom filter that remembers a million watched reels in about 1.2 MB",
+  "type": "module",
+  "scripts": {
+    "start": "node demo.js"
+  },
+  "license": "ISC"
+}
